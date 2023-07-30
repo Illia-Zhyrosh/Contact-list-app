@@ -1,0 +1,382 @@
+
+@keyframes menu{
+  from {
+    background-color: rgba(255, 164, 89, 0.058);
+    transform: translateX(-7rem);
+    
+  }
+
+  to {
+    background-color: rgb(255, 165, 89);
+    transform: translateX(0);
+  }
+}
+@keyframes contacts{
+  from {
+    background: rgba(255, 164, 89, 0.058);
+    
+    
+  }
+
+  to {
+    background: rgb(255, 193, 143)
+    
+  }
+}
+
+@keyframes menu-buttons{
+  from {
+    color: transparent;
+    
+    
+  }
+
+  to {
+    color: black;
+    
+  }
+}
+@keyframes iconSpin {
+  from{
+    transform: rotateZ(0)
+  }
+  to{
+    transform: rotateZ(360deg) ;
+  }
+  
+}
+@keyframes okIcon{
+  from {
+    color: rgba(4, 255, 0, 0.733);
+    
+    
+  }
+
+  to {
+    color:green;
+    
+  }
+}
+@keyframes errIcon{
+  from {
+    color: rgba(212, 57, 57, 0.733);
+    
+    
+  }
+
+  to {
+    color:red;
+    
+  }
+}
+html{
+  height: 100%;
+  background-color: rgb(251, 234, 219);
+}
+
+
+.SideBarHolder{
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  float: left;
+  width: 10rem;
+  height: 100%;
+  background-color:rgb(255, 165, 89);
+  border-radius: 0.35rem;
+  animation-name: menu;
+  animation-duration: 1s;
+  border-top-left-radius: 0;
+}
+.ContentHolder{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(251, 234, 219);
+}
+.ContactHolder{
+  display: flex;
+  border-style: none;
+  flex-direction: column;
+  float: right;
+  margin-left: auto;
+  width: 71.5%;
+  max-height: 70vh;
+  border-style: outset;
+  background: rgb(255, 193, 143);
+  word-wrap: break-word;
+  animation-name: contacts;
+  animation-duration: 1s;
+  overflow-y: scroll;
+  
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.sideButton{
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+  background-color: transparent;
+  animation-name: menu-buttons;
+  animation-duration: 2s;
+  border-style: none;
+  transition: 0.33s;
+}
+.sideButton:hover{
+  padding-right: 2%;
+  background-color: azure;
+  color: rgb(255, 47, 0);
+}
+.sideButton:focus{
+  outline: none;
+}
+.navBar{
+  display: flex;
+  flex-direction: row;
+  border-style: none;
+  background-color:rgb(248, 124, 0);
+  
+  padding: 1%;
+  align-items: center;
+}
+#menuButton{
+  display: flex;
+  width: auto;
+  height: 2.6rem;
+  border-radius: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-style: none;
+  background-color: transparent;
+  transition: ease-in 0.4s;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+#menuButton:hover{
+  
+  background-color: rgb(198, 132, 0);
+  border-style: none;
+  padding: 1%;
+  
+  
+}
+#menuButton:focus{
+  border-style: none;
+  outline: none;
+}
+.desc{
+  margin-left: auto;
+}
+.editButton{
+  background-color: transparent;
+  border-radius: 0.35rem;
+  border-style: none;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  transition: 0.33s;
+  margin-right: 1%;
+  margin-left: 2%;
+  width: 4rem;
+}
+.editButton:hover{
+  background-color: orange;
+  color: black;
+  
+}
+.removeButton{
+  background-color: transparent;
+  border-radius: 0.35rem;
+  font-size: 1.3rem;
+  color: rgb(205, 21, 11);
+  transition: 0.33s;
+  border-style: none;
+  width: 4rem;
+}
+.removeButton:hover{
+  background-color: rgb(255, 30, 0);
+  color: black;
+  
+}
+footer{
+   position: absolute;
+   bottom: 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   width: 100%;
+   height: 80px;
+   font-size: large;
+   padding-left: 2%;
+   padding-right: 2%;
+}
+footer > div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sortButton{
+  background-color: transparent;
+  border-radius: 0.15rem;
+  border-style: none;
+}
+.sortButton:hover{
+  background-color: burlywood;
+  color: white;
+ 
+}
+.sortButton:focus{
+  outline: none;
+}
+.contactFieldHolder{
+  width: 28%;
+  display: block;
+  margin-top: 22%;
+  position: absolute;
+  left: auto;
+  border-style: solid;
+  padding: 1%;
+ 
+}
+.input-row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+.input-row > label{
+  margin-right: 1%;
+  font-size: 1.5rem;
+}
+.input-row > input{
+  max-height: 1.8rem;
+}
+.input-row> button{
+  margin-left: auto;
+}
+  
+.addContactButton{
+  background-color: transparent;
+  border-style: none;
+  transition: 0.20s;
+}
+.addContactButton:hover{
+  background-color: rgb(236, 161, 70);
+  font-weight: bold;
+}
+td{
+  max-width: 12rem;
+  padding-right: 1rem;
+}
+th{
+  margin-left: 1%;
+}
+.serverInfo{
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.editorHolder{
+  position: absolute;
+  margin-left: auto;
+  width: 100%;
+}
+thead{
+  background-color: transparent;
+}
+tr{
+  background-color:rgb (255, 193, 143);
+}
+.icon{
+  height: 1.4rem;
+  animation-name: iconSpin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+.statusOKIcon{
+  margin-left: 0.5%;
+  margin-bottom: 0.25%;
+  animation-name: okIcon;
+  animation-duration: 1s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+.statusErrIcon{
+  margin-left: 0.5%;
+  margin-bottom: 0.25%;
+  animation-name: errIcon;
+  animation-duration: 1s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+.addInitialContactWindow{
+  display:flex;
+  background-color: beige;
+  flex-direction: column;
+}
+.yesButton{
+  border-radius: 0.35rem;
+  width: 20%;
+  margin-left: 20%;
+  background-color: transparent;
+  border-style: none;
+  transition: 0.35s;
+}
+.yesButton:focus{
+  outline: none;
+}
+.yesButton:hover{
+  background-color: rgb(111, 240, 124);
+  font-weight: bold;
+}
+.noButton:focus{
+  outline: none;
+}
+.noButton{
+  border-radius: 0.35rem;
+  margin-left: 20%;
+  width: 20%;
+  background-color: transparent;
+  border-style: none;
+  transition: 0.35s;
+}
+.noButton:hover{
+  background-color: rgb(240, 126, 111);
+  font-weight: bold;
+}
+.searchBar{
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: left;
+  align-items: center;
+  padding: 1%;
+  
+ 
+}
+.searchBar > input {
+  background-color: rgb(244, 213, 187);
+  font-size: 1.3rem;
+  border-radius: 0.2rem;
+  border-color: black;
+  margin-right:1% ;
+  
+}
+.searchBar > input:focus {
+  outline: none;
+}
