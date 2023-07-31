@@ -338,7 +338,7 @@ function App() {
       <div className='navBar'>
         <button id='menuButton' onClick={() => setMenu(!menu)}> <FaBars size={'1.5rem'} fontWeight={'100'} /> Menu </button>
 
-        <h2 className='desc'>Exercise 2 for Ecoding S.r.o</h2>
+        
 
       </div>
       <div className='ContentHolder' >
